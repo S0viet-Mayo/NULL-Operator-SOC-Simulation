@@ -62,7 +62,7 @@ def secret_ending():
 
     print("\n" * 2)
 
-    slow("Lasciate ogne speranza, voi ch'intrate.")
+    slow("Lasciate ogne speranza, voi ch'intrate...")
     time.sleep(2)
 
     print("\n" + "=" * 60)
@@ -211,8 +211,6 @@ nodes = {
     },
 
     16: {
-        "text": "All systems are considered untrusted. \nContainment has failed.",
-        "explanation": "Administrative control has been lost. Systems can no longer be reliably managed or trusted.",
         "ending": "SECRET"
     },
 
