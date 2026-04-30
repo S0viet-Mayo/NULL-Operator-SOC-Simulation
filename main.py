@@ -2,13 +2,13 @@ import os
 import time
 
 # -------------------------
-# USERNAME
+# Username
 # -------------------------
 user_name = input("Enter operator name: ").strip().upper()
 
 
 # -------------------------
-# SIMPLE UTIL
+# UI Util
 # -------------------------
 def clear():
     os.system("cls" if os.name == "nt" else "clear")
@@ -27,7 +27,7 @@ def slow(msg):
 
 
 # -------------------------
-# SECRET ENDING EFFECT
+# Effect For Secret Ending
 # -------------------------
 def secret_ending():
     clear()
@@ -72,7 +72,9 @@ def secret_ending():
     input("Press Enter to terminate session...")
 
     clear()
-
+# -------------------------
+# Story Nodes
+# -------------------------
 
 nodes = {
     1: {
@@ -226,7 +228,7 @@ nodes = {
 
 
 # -------------------------
-# GAME ENGINE
+# Engine
 # -------------------------
 def play():
     node_id = 1
@@ -242,19 +244,19 @@ def play():
         node = nodes[node_id]
 
         # -------------------------
-        # HEADER
+        # SOC Header
         # -------------------------
         print(f"SOC CONSOLE | OPERATOR: {user_name}\n")
         print(node.get("text", "[NO TEXT FOUND]"))
 
         # -------------------------
-        # SIEM LOGS
+        # SIEM Log Logic
         # -------------------------
         for entry in node.get("logs", []):
             log(entry)
 
         # -------------------------
-        # ANALYST NOTES
+        # Analyst Notes (Explanations)
         # -------------------------
         if node.get("explanation"):
             print("\n[ANALYST NOTE]")
@@ -262,7 +264,7 @@ def play():
             time.sleep(0.8)
 
         # -------------------------
-        # ENDING HANDLER
+        # Ending Logic
         # -------------------------
         if "ending" in node:
             print("\n" + "=" * 60)
@@ -279,7 +281,7 @@ def play():
             break
 
         # -------------------------
-        # OPTIONS HANDLING
+        # Option Logic
         # -------------------------
         options = node.get("options", {})
 
@@ -294,7 +296,7 @@ def play():
             print(f"{i}. {opt}")
 
         # -------------------------
-        # INPUT SAFETY
+        # Input Saftey
         # -------------------------
         choice = None
 
@@ -311,13 +313,13 @@ def play():
                 print("Enter a number.")
 
         # -------------------------
-        # NODE TRANSITION
+        # Node Transitioning
         # -------------------------
         node_id = options[choice]
 
 
 # -------------------------
-# ENTRY POINT (IMPORTANT)
+# Game Start
 # -------------------------
 if __name__ == "__main__":
     play()
