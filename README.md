@@ -1,4 +1,4 @@
-# SOC attack Simulation Game 
+# NULL Operator: SOC Simulation 
 
 ## Overview
 This project is a text-based choice based SOC (Security Operations Center) simulator in which player choices will affect the outcome of the game. Real world attack patterns/stages have been used to model the game as closely to real life SOC operations as possible. There are 5 possible endings with one secret ending. 
