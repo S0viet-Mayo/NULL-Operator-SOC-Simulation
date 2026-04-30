@@ -111,13 +111,13 @@ nodes = {
     },
 
     6: {
-        "text": "Device reset completed.",
+        "text": "You reset the device, device reset completed.",
         "explanation": "Some IoT malware is non-persistent (Like Mirai) and can be temporarily removed by rebooting a device. However, if the underlying vulnerability is not fixed, the device can be quickly reinfected.",
         "ending": "REINFECTION"
     },
 
     7: {
-        "text": "Credentials updated. Device secured.",
+        "text": "You update the Credentials. Device secured.",
         "explanation": "Changing default credentials is one of the most effective ways to prevent reinfection. Many botnets rely entirely on weak or unchanged passwords.",
         "ending": "THREAT CONTAINED"
     },
