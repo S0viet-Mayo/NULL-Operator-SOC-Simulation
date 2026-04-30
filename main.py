@@ -66,7 +66,7 @@ def secret_ending():
     time.sleep(2)
 
     print("\n" + "=" * 60)
-    slow("ENDING: IRRECOVERABLE COMPROMISE")
+    slow("SECRET ENDING: IRRECOVERABLE COMPROMISE")
 
     print("\n" * 2)
     input("Press Enter to terminate session...")
